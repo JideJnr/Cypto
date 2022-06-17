@@ -2,7 +2,7 @@ import React from 'react'
 import {useLocation} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
-function Go() {
+function Link() {
     const location = useLocation()
     const {text} = location.state
 
@@ -19,9 +19,10 @@ function Go() {
 
           </p>
 
-          <div className='flex-col text-white text-center ' onClick={() => navigate(-1)}>
-          <p>GO BACK</p>
-        </div>
+
+          <button className='flex rounded border-black bg-black border text-white px-3 py mx-auto'  onClick={() => navigate(-1)}>
+          GO BACK
+        </button>
         </div>
 
   
@@ -29,4 +30,4 @@ function Go() {
   )
 }
 
-export default Go
+export default Link

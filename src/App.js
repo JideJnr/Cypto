@@ -1,28 +1,19 @@
-import React, {  lazy } from 'react';
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
-const Main  = lazy(() => import('./Main'));
-
-const Link  = lazy(() => import('./Link'));
+import React from 'react'
+import Featured from './components/Featured'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
+import Signup from './components/Signup'
+import Footer from './components/Footer'
 
 function App() {
   return (
-
-  
-      <BrowserRouter>      
-       
-        
-          <Routes>
-            <Route path='/l' element={<Link/>}/>
-            <Route path='/' element={<Main/>}/>
-          </Routes>
-
-       
-    </BrowserRouter>
-  
-    
+    <>
+      <Navbar />
+      <Hero />
+      <Featured />
+      <Signup />
+      <Footer />
+    </>
   );
 }
 
