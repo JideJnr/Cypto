@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import './Navbar.css'
+import {Link } from 'react-router-dom'
 
 const Navbar = () => {
 const [click, setClick] = useState(false)
@@ -26,7 +27,9 @@ const handleClick = () => setClick(!click)
                     </li>
                 </ul>
                 <div className='btn-group'>
-                    <button className='btn'>Login</button>
+                    <Link to = 'l'>
+                        <button className='btn' >Login</button>
+                    </Link>
                 </div>
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={20} style={{color: '#333'}}/>) : (<FaBars size={20} style={{color: '#333'}} />)}
