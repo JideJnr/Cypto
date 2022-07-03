@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 
+
 function Sidebar() {
     let links = [
         {name:"Banking",link:"/bnk"},
@@ -12,14 +13,14 @@ function Sidebar() {
     ]
     let [open, setOpen] = useState(false);
   return (
-    <div className='shadow-md w-screen bg-white fixed top-0 left-0 h-fit '>
-        <div className='md:flex items-center justify-between   py-4 md:px-10 px-7'>
+    <div className='shadow-md w-screen bg-white top-0 left-0 h-fit '>
+        <div className='md:flex items-center justify-between    py-4 md:px-10 px-7'>
 
             <Link to='/'>
             <p className=' flex text-[2.0rem] mx-auto'>De<span className='primary'>Fi</span></p>
             </Link>
 
-            <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
+            <div onClick={()=>setOpen(!open)} className='text-2xl absolute right-8 top-6 cursor-pointer md:hidden'>
               <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
 
             </div>
@@ -29,20 +30,13 @@ function Sidebar() {
                              ${open ? 'top-20 opacity-100':'top-[-490px] md:opacity-100 opacity-0' }`}>
                 {links.map((link) =>(
                     <li key={link.name}
-                    className='md:ml-8 text-xl md:my-0 my-7'>
+                    className='md:ml-8 text-xl md:my-0 my-7 '>
                         <a href={link.link} className='text-gray-800 hover:text-gray-400 duration-500'>
                             {link.name}
                         </a>
                     </li>
                 ))}
-                <Link to='l'>
-                    <div className='mx-auto flex'>
-                        <button className='btn'>
-                            Login
-                        </button>
-                    </div>    
 
-                </Link>
             </ul>
 
         </div>

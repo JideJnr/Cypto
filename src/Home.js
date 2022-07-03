@@ -1,9 +1,10 @@
 import React from 'react'
-import Featured from './components/Featured'
-import Hero from './components/Hero'
-import Sidebar from './components/Sidebar'
-import Signup from './components/Signup'
-import Footer from './components/Footer'
+import Featured from './Components/Featured'
+import Hero from './Components/Hero'
+import Sidebar from './Components/Sidebar'
+import Signup from './Components/Signup'
+import Footer from './Components/Footer'
+import News from './Components/News'
 import './Home.css'
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
       <Sidebar/>
       <Hero />
       <Featured />
+      <News/>
       <Signup />
       <Footer />
     </>

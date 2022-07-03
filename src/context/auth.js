@@ -1,9 +1,10 @@
 import { createContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./../firebase";
-import Suspence from "../components/Suspence";
+import { onAuthStateChanged, RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "../firebase";
+import Suspence from "../Components/Suspence";
 
 export const AuthContext = createContext();
+
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);

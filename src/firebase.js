@@ -5,12 +5,13 @@ import {getStorage} from 'firebase/storage';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyASfed17Q8oVEP0ZIVQxlPyZZZvFBv03AM",
-  authDomain: "pegobank-336af.firebaseapp.com",
-  projectId: "pegobank-336af",
-  storageBucket: "pegobank-336af.appspot.com",
-  messagingSenderId: "837314440990",
-  appId: "1:837314440990:web:4341fe6edf6bd1fecfa30f"
+  apiKey: "AIzaSyD2raTfl1qH3DK9NxL8qkX2OB7-KyfLrgo",
+  authDomain: "nefli-485f1.firebaseapp.com",
+  projectId: "nefli-485f1",
+  storageBucket: "nefli-485f1.appspot.com",
+  messagingSenderId: "899740689229",
+  appId: "1:899740689229:web:43b5ad8570099932240d04",
+  measurementId: "G-9P35BL3J8C"
   }
 
 
