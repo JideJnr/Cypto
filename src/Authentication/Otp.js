@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 
-import { db, auth } from "../firebase";
+import { db, auth } from "../config/firebase";
 import {  getDoc ,doc } from "firebase/firestore";
 import { signOut } from 'firebase/auth';
 

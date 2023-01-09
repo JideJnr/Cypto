@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {auth} from './../firebase'
+import {auth} from '../config/firebase'
 import {  signInWithEmailAndPassword} from 'firebase/auth'
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 
 
 
@@ -11,10 +11,14 @@ import { useNavigate, Link } from 'react-router-dom';
 
 
 const SigninForm = () => {
+
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [password, setPassword] = useState('');
+
     const isInvalid = password === '' || email === '' ;
+    
     const navigate = useNavigate()
 
     
@@ -25,25 +29,25 @@ const SigninForm = () => {
           setError('Input All Fields!!!');
       }
       try{
-          await signInWithEmailAndPassword( auth, email, password);
-    
-
-          navigate('/o');
+        
+        setLoading(true);
+        await signInWithEmailAndPassword( auth, email, password);
+        navigate('/')
+      
           
       }
       catch(error){
-          
-  
+        
       }
   };
 
 console.log(error)
 
     return (
-        <div className='w-screen h-screen flex p-5'>
+       <div className='w-screen h-screen flex p-5'>
             <div className=' flex-col m-auto w-fit h-fit  p-5 '>
-                <p className=' flex text-[3.5rem] mx-auto'>Ne<span className='primary'>Fli</span></p>
-                <p>Sign In Into Your account</p>
+                <p className=' flex text-[3.5rem] mx-auto'>Coin<span className='primary'>Vest</span></p>
+                <p> Sign In Into Your account</p>
                 <p>{error}</p>
                 <div className=' text-[12px] flex-col my-5 p-5 border border-xl border-[#d8dee4] rounded bg-[#f6f8fa] '>
                     <p className=' mb-2'>Email Address</p>

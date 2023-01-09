@@ -1,19 +1,27 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import {  Link } from 'react-router-dom';
 
+import { db, auth } from "../config/firebase";
+import {  getDoc ,doc } from "firebase/firestore";
+
+
 export default function Dropdown() {
+
+
   
   return (
     <div className=" w-56 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md text-black px-4 py-2 text-sm font-medium  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            Olajide@gmail.com
+            <p>
+             nolajide@ww.com
+            </p>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
+
+
+
 
           </Menu.Button>
         </div>
@@ -40,14 +48,14 @@ export default function Dropdown() {
   <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
                     <p>
-                      Olajide Nurudeen
+                      olajide nurudeen
                     </p>
                   </div>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <Link to= '/s'>
+                  <Link to= '/st'>
                     
                  
                   <button
@@ -65,7 +73,7 @@ export default function Dropdown() {
             <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
-                  <Link to= '/s'>
+                  <Link to= '/r'>
                   <button
                     className={`${
                       active ? 'bg-violet-500 text-white h-14' : 'text-gray-900'
@@ -79,7 +87,7 @@ export default function Dropdown() {
               </Menu.Item>
               <Menu.Item>
                 {({ active }) => (
-                  <Link to= '/s'>
+                  <Link to= '/c'>
                   <button
                     className={`${
                       active ? 'bg-violet-500 text-white h-14' : 'text-gray-900'

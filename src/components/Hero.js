@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import Crypto from '../assets/hero-img.png'
 
 const Hero = () => {
     return (
@@ -21,9 +20,7 @@ const Hero = () => {
 
                 {/* Right Side */}
                 <div className='right'>
-                    <div className='img-container'>
-                        <img src={Crypto} alt=''/>
-                    </div>
+
                 </div>
             </div>
         </div>

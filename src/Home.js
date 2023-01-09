@@ -1,23 +1,21 @@
-import React from 'react'
-import Featured from './Components/Featured'
-import Hero from './Components/Hero'
-import Sidebar from './Components/Sidebar'
-import Signup from './Components/Signup'
-import Footer from './Components/Footer'
-import News from './Components/News'
-import './Home.css'
+import React, { useContext } from 'react'
+ import Main from './Main/Main'
+import Dashboard from './Dashboard/Dashboard'
 
-function Home() {
+ import {AuthContext} from './Context/auth'
+
+function CHome() {
+    
+    const {user} = useContext(AuthContext);
+
   return (
-    <>
-      <Sidebar/>
-      <Hero />
-      <Featured />
-      <News/>
-      <Signup />
-      <Footer />
-    </>
-  );
+    <>{user ?
+
+        <><Dashboard/></> :
+        <><Main/></>
+        
+        }</>
+  )
 }
 
-export default Home;
+export default CHome

@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import ChatMessage from './ChatMessage';
 import ChatTaskbar from './ChatTaskbar';
 import Taskbar from '../../../Components/Taskbar';
@@ -6,19 +6,15 @@ import Taskbar from '../../../Components/Taskbar';
 
 
 
-const Contact = () => {
+const Chat = () => {
 
-
-  
-
- 
     
   return (
-    <div className=' flex flex-col w-screen max-h-screen bg-[#eee] '>
+    <div className=' flex flex-col w-screen h-screen  '>
 
-      <Taskbar />
+      <Taskbar   />
       <ChatMessage  />
-      <ChatTaskbar  />
+      <ChatTaskbar />
 
 
 
@@ -27,4 +23,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Chat

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect }  from 'react'
 import User from '../../../assets/user.png'
 import Admin from '../../../assets/admin.png'
-import { auth,} from '../../../firebase'
+import { auth,} from '../../../config/firebase'
 import Moment from 'react-moment'
 
 
